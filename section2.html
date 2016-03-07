@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+    	html,body,#map-canvas{
+    		height : 100%;
+    	}
+    
+    </style>
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHR9lSsc7jB8VtYuj6NuaK6QcspfFUnZQ&v=3.exp&sensor=true&signed_in=true"></script>
+    <script type="text/javascript">
+		x = navigator.geolocation;
+		x.getCurrentPosition(success, failure);
+
+		function success(position){
+			var mylat = position.coords.latitude;
+			var mylng = position.coords.longitude;
+
+			var coords = new google.maps.LatLng(mylat,mylng);
+
+			var mapOptions = {
+				zoom: 16,
+				center: coords,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			var map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+
+			var marker = new google.maps.Marker({map: map,position: coords});
+		}
+		function failure(){
+			$('body').append("<p>It didn't work, co-ordinates not available!</p>");
+		}
+		
+    </script>
+  </head>
+  <body>
+	<div id="map-canvas">
+	
+	</div>
+  </body>
+</html>
+

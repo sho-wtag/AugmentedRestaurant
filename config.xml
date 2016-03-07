@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/AugmentedRestaurant" version="1.0.0" viewmodes="maximized">
+    <access origin="http://csi.gstatic.com/" subdomains="true"></access>
+    <access origin="http://googleapis.com" subdomains="true"></access>
+    <access origin="http://gstatic.com" subdomains="true"></access>
+    <access origin="http://google.com" subdomains="true"></access>
+    <access origin="https://googleapis.com" subdomains="true"></access>
+    <access origin="https://gstatic.com" subdomains="true"></access>
+    <access origin="https://google.com" subdomains="true"></access>
+    <access origin="*" subdomains="true"></access>
+    <tizen:application id="he6wVdrooK.AugmentedRestaurant" package="he6wVdrooK" required_version="2.3"/>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <feature name="http://tizen.org/feature/location.gps"/>
+    <feature name="http://tizen.org/feature/datasync"/>
+    <feature name="http://tizen.org/feature/camera"/>
+    <feature name="http://tizen.org/feature/location.batch"/>
+    <icon src="icon.png" height="2"/>
+    <name>AugmentedRestaurant</name>
+    <tizen:privilege name="http://tizen.org/privilege/datasync"/>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:privilege name="http://tizen.org/privilege/location"/>
+    <tizen:privilege name="http://tizen.org/privilege/mediacapture"/>
+    <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+    <tizen:privilege name="http://tizen.org/privilege/content.read"/>
+    <tizen:privilege name="http://tizen.org/privilege/content.write"/>
+    <tizen:privilege name="http://tizen.org/privilege/filesystem.read"/>
+    <tizen:privilege name="http://tizen.org/privilege/filesystem.write"/>
+    <tizen:profile name="mobile"/>
+    <tizen:setting screen-orientation="portrait" context-menu="enable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
+</widget>
